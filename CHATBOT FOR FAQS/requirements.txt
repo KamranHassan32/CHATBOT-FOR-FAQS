@@ -1,0 +1,5 @@
+Flask==3.0.3
+nltk==3.9.1
+openai==1.54.4
+scikit-learn==1.5.2
+pytest==8.3.4

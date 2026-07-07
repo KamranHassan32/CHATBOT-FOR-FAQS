@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NovaStore FAQ Assistant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  </head>
+  <body>
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <main class="app-shell">
+      <section class="hero-card">
+        <div class="hero-copy">
+          <span class="badge">AI-powered support</span>
+          <h1>Ask anything about NovaStore</h1>
+          <p>
+            Get instant answers to common questions about shipping, returns, payments, and support.
+          </p>
+        </div>
+        <div class="hero-illustration">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="bot-circle">✦</div>
+        </div>
+      </section>
+
+      <section class="chat-card">
+        <div id="chatWindow" class="chat-window">
+          <div class="message bot">
+            <strong>NovaBot</strong>
+            <p>Hello! I can help with returns, shipping, tracking, and more. Try asking a question.</p>
+          </div>
+        </div>
+
+        <div class="quick-pills">
+          <button class="pill" data-question="How long does shipping take?">Shipping time</button>
+          <button class="pill" data-question="What is the return policy?">Returns</button>
+          <button class="pill" data-question="How can I track my order?">Order tracking</button>
+          <button class="pill" data-question="Do you offer international shipping?">International</button>
+        </div>
+
+        <form id="chatForm" class="chat-form">
+          <input id="messageInput" type="text" placeholder="Type your question here..." autocomplete="off" />
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+  </body>
+</html>
